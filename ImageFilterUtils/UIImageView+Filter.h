@@ -52,7 +52,7 @@
  Apply 'filter' to the image view's image without animation.
  */
 - (void)applyFilter:(CIFilter *)filter;
-- (void)applyWithPreset:(ImageFilterPreset)preset;
+- (void)applyFilterWithPreset:(ImageFilterPreset)preset;
 
 /*
  Remove any filters applied.  This bring back the original image.

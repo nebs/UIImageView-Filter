@@ -87,7 +87,7 @@
     [self applyFilter:filter completion:nil];
 }
 
-- (void)applyWithPreset:(ImageFilterPreset)preset {
+- (void)applyFilterWithPreset:(ImageFilterPreset)preset {
     CIFilter *filter = [self.image filterWithPreset:preset];
     [self applyFilter:filter];
 }
