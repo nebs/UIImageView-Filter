@@ -13,4 +13,6 @@ Add the CIFilter framework to your project and #import "UIImageView+Filter.h".
 Sample Usage
 ------------
 To turn an image black and white you could call:
+```objc
 [self.imageView applyFilterWithPreset:ImageFilterPresetBlackAndWhite];
+```
