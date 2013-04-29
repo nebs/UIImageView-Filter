@@ -10,7 +10,8 @@
 
 typedef enum {
     ImageFilterPresetBlackAndWhite = 0,
-    ImageFilterPresetSepiaTone
+    ImageFilterPresetSepiaTone,
+    ImageFilterPresetPixelate
 } ImageFilterPreset;
 
 @interface UIImage (Filter)

@@ -52,6 +52,18 @@
             filter = [CIFilter filterWithName:@"CISepiaTone"
                                 keysAndValues:kCIInputImageKey, image, nil];
             break;
+        case ImageFilterPresetPixelate: {
+                CIFilter* posterize = [CIFilter filterWithName:@"CIColorPosterize"];
+                [posterize setDefaults];
+                [posterize setValue:[NSNumber numberWithDouble:8.0] forKey:@"inputLevels"];
+                [posterize setValue:image forKey:@"inputImage"];
+
+                filter = [CIFilter filterWithName:@"CIPixellate"];
+                [filter setDefaults];
+                [filter setValue:[NSNumber numberWithDouble:4.0] forKey:@"inputScale"];
+                [filter setValue:[posterize valueForKey:@"outputImage"] forKey:@"inputImage"];
+            }
+            break;
         default:
             break;
     }

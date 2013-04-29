@@ -22,7 +22,7 @@
     self.imageView.image = [UIImage imageNamed:@"ferrari.jpg"];
     
     // Setup table view
-    self.filterPresets = @[@"None", @"Black & White", @"Sepia"];
+    self.filterPresets = @[@"None", @"Black & White", @"Sepia", @"Pixelate"];
     self.filterTableView.delegate = self;
     self.filterTableView.dataSource = self;
     [self.filterTableView registerClass:[UITableViewCell class]
@@ -43,6 +43,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
         case 2: // Sepia
             [self.imageView applyFilterWithPreset:ImageFilterPresetSepiaTone
+                                         animated:self.animationSwitch.on
+                                       completion:nil];
+            break;
+        case 3: // Pixelate
+            [self.imageView applyFilterWithPreset:ImageFilterPresetPixelate
                                          animated:self.animationSwitch.on
                                        completion:nil];
             break;

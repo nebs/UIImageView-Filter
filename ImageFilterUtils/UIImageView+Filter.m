@@ -29,6 +29,16 @@
         filteredImageView.tag = IMAGE_FILTER_TAG;
         [self addSubview:filteredImageView];
 
+        // No animation
+        if (animationDuration == 0.0f) {
+            filteredImageView.image = filteredImage;
+            if (completionBlock) {
+                completionBlock();
+            }
+            return;
+        }
+
+        // Animation
         [UIView transitionWithView:self
                           duration:animationDuration
                            options:animationOptions
