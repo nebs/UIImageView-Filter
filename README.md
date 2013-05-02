@@ -1,5 +1,5 @@
-image-filter-categories
-=======================
+UIImageView-Filter
+==================
 
 /ImageFilterUtils contains categories on UIImage and UIImageView for applying CIFilters.
 In addition to being able to apply CIFilters you can use some of the included presets.
